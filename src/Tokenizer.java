@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -63,25 +60,39 @@ public class Tokenizer {
     }
     
     public void Analize(String inputString) {
+        
         if (DetectChihuahua(inputString) == null){
             
         } else {
-            String Nchi [] = DetectChihuahua(inputString).split(inputString);
+            //String Nchi [] = DetectChihuahua(inputString).split(inputString);
             System.out.println("Intruccion: Chihuahua");
+            System.out.println("//"+DetectChihuahua(inputString));
         }
         
         if (DetectPitbull(inputString) == null){
             
         } else {
-            String Npit [] = DetectPitbull(inputString).split(inputString);
+            //String Npit [] = DetectPitbull(inputString).split(inputString);
             System.out.println("Intruccion: Pitbull");
         }
-        //
-        //String Ngol [] = DetectGolden(inputString).split(inputString);
-        //String Nlab [] = DetectLabrador(inputString).split(inputString);
-        //String Nhusk [] = DetectHusky(inputString).split(inputString);
         
+        if (DetectGolden(inputString) == null){
+            
+        } else {            
+            System.out.println("Intruccion: Golden");
+        }
         
+        if (DetectLabrador(inputString) == null){
+            
+        } else {            
+            System.out.println("Intruccion: Labrador");
+        }
+        
+        if (DetectHusky(inputString) == null){
+            
+        } else {            
+            System.out.println("Intruccion: Husky");
+        }
     }
     
 }
