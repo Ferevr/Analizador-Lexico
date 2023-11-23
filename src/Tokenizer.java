@@ -67,7 +67,7 @@ public class Tokenizer {
             Pattern Cpatron = Pattern.compile("(?<=Chihuahua\\s)[A-Za-z0-9]*");
             Matcher matcher = Cpatron.matcher(inputString);
             System.out.println("Token: Variable");
-            System.out.println("lexema: " + matcher.group());
+            //System.out.println("lexema: " + matcher.group());
         }
         
         if (DetectPitbull(inputString) != null){
