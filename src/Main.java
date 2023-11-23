@@ -1,17 +1,25 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        /*
+        Scanner sc = new Scanner(System.in);
+        List<String> lines = new ArrayList<>();
         
-        Pattern patron = Pattern.compile("Chihuahua\\s*[A-Za-z0-9]*");
-        Matcher matcher = patron.matcher("Chihuahua 55 Husky");
-        if (matcher.find()){
-            System.out.println("Token detectado: " + matcher.group());
+        Tokenizer analizador = new Tokenizer();
+        while (true) {
+            String line = sc.nextLine();
+            if (line.isEmpty()) {
+                break;
+            }
+            lines.add(line);
         }
-        */
-        String entrada = "Chihuahua 556";
-        Tokenizer tokenizador = new Tokenizer(entrada);
-        tokenizador.Analize(entrada);
+        System.out.println("Analizando...");
+        for (String linea : lines){
+            analizador.Analize(linea);
+        }
+        sc.close();
     }
-    
 }
