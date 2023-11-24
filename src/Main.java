@@ -16,9 +16,10 @@ public class Main {
             }
             lines.add(line);
         }
-        System.out.println("Analizando...");
+        System.out.println("ANALIZANDO...");
         for (String linea : lines){
             analizador.Analize(linea);
+            System.out.println("------------------------------------------------------------------------");
         }
         sc.close();
     }
